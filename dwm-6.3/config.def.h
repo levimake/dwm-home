@@ -65,6 +65,10 @@ static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%"
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
+/* brightness configuration keys */
+static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
+static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
+
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -131,9 +135,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 	/*VOLUME CONFIG KEYS*/
-	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,                       XF86XK_AudioLowerVolume, spawn,     {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute,        spawn,     {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn,     {.v = upvol   } },
+
+	/*BRIGHTNESS CONFIG KEYS */
+	{ 0,                       XF86XK_MonBrightnessUp,   spawn,    {.v = brupcmd} },
+	{ 0,                       XF86XK_MonBrightnessDown, spawn,    {.v = brdowncmd} },
 
 	/*MAIM SCREENSHOT KEYS*/
 	{ MODKEY|ShiftMask,           XK_s,  spawn,            {.v = print_region_copy_cmd } },
