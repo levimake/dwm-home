@@ -1,0 +1,37 @@
+--PREREQ--
+sudo pacman -S xorg lightdm lightdm-gtk-greeter
+
+--INSTALL--
+git clone https://github.com/levimake/dwm-home
+cd dwm-home
+chmod +x install.sh
+./install.sh
+
+--SET UP LIGHTDM ENTRY--
+sudo nano /usr/share/xsessions/dwm.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic window manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+
+--DUNST--
+sudo pacman -S dunst
+
+--POLKIT--
+sudo pacman -S polkit
+
+--THUNAR--
+sudo pacman -S thunar thunar-media-tags-plugin thunar-volman ffmpegthumbnailer gvfs-mtp thunar-archive-plugin file-roller
+
+QUICK-DWM-REF: https://ratfactor.com/dwm
+
+---SHORTCUTS-----
+TERMINAL - ALT + SHIFT + ENTER
+ST FONT SIZE UP / DOWN - CTRL + PAGE UP/DOWN
+DMENU - ALT + P
+CHANGE MASTER - ALT+ENTER
+RESIZE - ALT + H / ALT + L
+SWITCH WINDOWS - ALT + J / ALT + K
