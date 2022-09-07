@@ -1,0 +1,10 @@
+slstatus &
+
+picom --config /dev/null --backend xrender --experimental-backends &
+
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+nitrogen --restore &
+
+/home/levis/powermgmt/batmon.sh &
+/home/levis/powermgmt/critbat.sh &
