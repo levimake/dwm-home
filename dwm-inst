@@ -1,5 +1,5 @@
 --PREREQ--
-sudo pacman -S xorg lightdm lightdm-gtk-greeter
+sudo pacman -S xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 --INSTALL--
 git clone https://github.com/levimake/dwm-home
@@ -19,6 +19,10 @@ Type=XSession
 
 --DUNST--
 sudo pacman -S dunst
+
+--UTILITIES--
+sudo pacman -S feh nitrogen mpv
+yay -S deadbeef qpdfview
 
 --POLKIT--
 sudo pacman -S polkit
