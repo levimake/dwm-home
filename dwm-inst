@@ -21,8 +21,8 @@ Type=XSession
 sudo pacman -S dunst
 
 --UTILITIES--
-sudo pacman -S feh nitrogen mpv
-yay -S deadbeef qpdfview
+sudo pacman -S feh nitrogen mpv zathura zathura-pdf-poppler
+yay -S deadbeef
 
 --POLKIT--
 sudo pacman -S polkit
