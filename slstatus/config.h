@@ -72,8 +72,8 @@ static const struct arg args[] = {
     { separator,        " │ ",          NULL },
 	{ ram_perc, "RAM  %s%% ", NULL	      },
     { separator,        " │ ",          NULL },*/
-	{ run_command, "%4s", "pulsemixer --get-volume | awk {'print $1'}" },
+  { run_command, "%4s", "pulsemixer --get-volume | awk {'print $1'}" },
     { separator,        " │ ",          NULL },
-	{ datetime, " %s",           "%r" },
+	{ datetime, " %s",           "%H:%M" },
     { separator,        " | ",          NULL },
 };
