@@ -4,7 +4,8 @@ picom --config /dev/null --backend xrender --experimental-backends &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+/usr/bin/dunst &
+
 nitrogen --restore &
 
-/home/levis/powermgmt/batmon.sh &
-/home/levis/powermgmt/critbat.sh &
+redshift-gtk &
